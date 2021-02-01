@@ -1,0 +1,1 @@
+This project is going to create my first html page. So far I have learned how to create a git repo, html and css basics, and how to open and use devtools for front-end work. Hopefully I can learn how to do some cool stuff on a webpage and make it look really nice. 
