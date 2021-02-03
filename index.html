@@ -1,19 +1,207 @@
 <!DOCTYPE html>
 <html>
+    <head>
    <style>
+       body, html {
+           margin: 0;
+           height: 100%
+       }
+       ul[class="head"] {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           max-width: 100%;
+       }
+       li {
+           display: inline;
+            font-family: arial, sans-serif;
+           margin: 20px;
+           padding: 10px;
+           font-size: small;
+       }
+       .head-text {
+           color: black;
+           text-decoration: none;
+       }
+       #right {
+           float: right;
+           margin: 5px;
+       }
+       #right-right {
+           float: right;
+           margin: 5px;
+           padding-top: 5px;       }
+       #left {
+           float: left;
+           margin: 5px;
+       }
+       .main {
+           display: grid;
+           grid-template-columns: 25% 25% 25% 25%;
+           grid-template-rows: 230px 230px 230px 230px;
+       }
        #logo {
-           position: center;
+           position: relative;
+           grid-column: 2/4;
+           grid-row: 2/4;
+           justify-self: center;
+           align-self: top;
        }
        #search {
-           position: center;
+           position: relative;
+           grid-column: 2/4;
+           grid-row: 2/4;
+           justify-self: center;
+           top: 120px;
+       }
+       input[type=text] {
+           width: 100%;
+           height: 40px;
+           padding-left: 40px;
+           background-image: url('https://www.w3schools.com/css/searchicon.png');
+           background-position: 7px;
+           background-repeat: no-repeat;
+           border-radius: 50px;
+           border-color: rgb(204, 200, 200);
+           border-width: 1px;
+           border-style: solid;
+       }
+       input[type=text]:hover {
+           box-shadow: 0 0 1px 1px rgb(200, 200, 240);
+       }
+       iput[type=text]:focus {
+           outline: none;
+       }
+    
+       #submit {
+           position: relative;
+           top: 35px;
+           left: 115px;
+           height: 35px;
+           width: 140px;
+           border-width: 0px;
+           border-radius: 5px;
+           font: arial;
+           background-color: rgb(243, 241, 241);
+       }
+       #submit:hover {
+           box-shadow: 1px 1px rgb(204, 200, 200);
+           border: 1px solid;
+           border-color:rgb(204, 200, 200);
+       }
+       #lucky {
+           position: relative;
+           top: 35px;
+           left: 125px;
+           height: 35px;
+           width: 140px;
+           border-width: 0px;
+           border-radius: 5px;
+           font: arial;
+           background-color: rgb(243, 241, 241);
+       }
+       #lucky:hover {
+           box-shadow:1px 1px rgb(204, 200, 200);
+           border: 1px solid;
+           border-color:rgb(204, 200, 200);   
+       }
+       .footer {
+           width: 100%;
+           position: fixed;
+           bottom: 0;
+
+       }
+       ul[class="foot"] {
+           list-style-type: none;
+           margin: 0 auto;
+           padding: 10px;
+           background-color: rgb(236, 240, 236);
+           overflow: hidden;
+           text-align: center;
+           max-width: 100%;
+           
+       }
+       #foot-left {
+           float: left;
+           margin: 5px;
+           text-align: center;
+       }
+       #center {
+           margin: auto;
+           text-align: center;
+       }
+       #foot-right {
+           float: right;
+           margin:5px;
+           text-align: center;
+       }
+       .foot-text {
+           color:rgb(143, 139, 139);
+           text-decoration: none;
+       }
+       .leaf {
+           max-width: 50%;
+           height: auto;
+           transform: scale(0.65);
+       }
+       #apps-img {
+           resize: 5px 5px;
+           max-width: 25px;
+           height: auto;
+           padding: 0px 5px 5px 5px;
+           border-radius: 50px;
+           margin: 0;
+       }
+       #apps-img:hover {
+           background-color:rgb(218, 216, 216);
+       }
+       #signin {
+           width: 100px;
+           height: 25px;
+           margin: 0;
+           font-size: 16px;
+           background-color: rgba(30, 105, 245, 0.966);
+           border: 0;
+           padding: 0;
+           border-radius: 10px;
+           color:white;
+       }
+       #right-sign {
+           padding: 0;
+           float: right;
+           margin: 5px;
        }
    </style>
-    <main>
+    </head>
+    <body>
+    <ul class="head">
+       <li id="left"><a class="head-text" href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+       <li id="left"><a class="head-text" href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+       <li id="right-sign" class="head-text" href=""><button id="signin">Sign in</button></li>
+       <li id="right-right"><a class="head-text" href="https://about.google/intl/en/products/"><img id="apps-img" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png"></a></li>
+       <li id="right"><a class="head-text" href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a></li>
+       <li id="right"><a class="head-text" href="https://mail.google.com">Gmail</a></li>
+
+    </ul>
+   <main class=main>
         <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
-        <form id=search>
-            <input type="text" placeholder="search">
-            <button type="search">Search</button>
+        <form action="http://www.google.com" id="search">
+            <input type="text" size="50" alt="Type search here">
+            <br>
+            <button id="submit" type="submit" alt="search button">Google Search</button>
+            <button id="lucky" type="button" alt="feeling lucky">I'm Feeling Lucky</button>
         </form>
     </main>
-
+    </body>
+    <footer class="footer">
+        <ul class="foot">
+            <li><a class="foot-text" id="foot-left" href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/">Advertising</a></li>
+            <li><a class="foot-text" id="foot-left" href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-aw-a-g4sb_test_3c!o2&gmbsrc=us-en_US-et-z-z-gmb-s-z-r~sb-g4sb_test_3c-u&utm_content=g4sb_test_3c&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter#!/">Business</a></li>
+            <li><a class="foot-text" id="foot-left" href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+            <li><img class="leaf" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"><a class="foot-text" id="center" href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Carbon neutral since 2007</a></li>
+            <li><a class="foot-text" id="foot-right" href="">Settings</a></li>
+            <li><a class="foot-text" id="foot-right" href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></li>
+            <li><a class="foot-text" id="foot-right" href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></li>
+        </ul>
+    </footer>
 </html>
